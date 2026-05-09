@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Features — Flexi Input</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site">
+        <div class="inner">
+            <a class="brand" href="./">Flexi Input</a>
+            <nav>
+                <a href="./">Home</a>
+                <a href="features.html" class="active">Features</a>
+                <a href="download.html">Download</a>
+                <a href="changelog.html">Changelog</a>
+                <a href="faq.html">FAQ</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Features</h1>
+        <p class="lede">Everything Flexi Input does today. The list is intentionally short — the app is meant to do one thing well.</p>
+
+        <h2>Per-device button remapping</h2>
+        <p>Every connected mouse appears in the device list. Toggle remapping on for a device, then bind any of its side-buttons (button 3 and above) to a keyboard shortcut. Bindings are stored per device, so unplugging and reconnecting the same mouse restores its layout.</p>
+
+        <h2>Hotkey recording</h2>
+        <p>Click <em>Record</em>, press the shortcut, click <em>Save</em>. The shortcut must include at least one modifier (Cmd, Ctrl, Option, or Shift) to avoid accidental remaps of plain letters. The recorder shows a live preview using the same notation macOS uses in menus.</p>
+
+        <h2>Click swallowing</h2>
+        <p>When a button is bound, the original click never reaches the foreground app — Flexi Input intercepts it via <code>CGEventTap</code> and posts the bound key combo instead. Unbound buttons pass through unchanged.</p>
+
+        <h2>Natural scroll toggle</h2>
+        <p>A single switch in the device list reverses the scroll-wheel direction for every mouse while the app is running. Useful when macOS's global setting affects your trackpad in the wrong direction.</p>
+
+        <h2>Lightweight</h2>
+        <ul class="checks">
+            <li>Menu bar only — no Dock icon, no main window.</li>
+            <li>Pure SwiftUI + AppKit. No Electron. No bundled Chromium.</li>
+            <li>Universal binary — runs natively on Apple Silicon and Intel Macs.</li>
+            <li>No background daemons, no login items, no analytics.</li>
+        </ul>
+
+        <h2>Distribution</h2>
+        <p>Signed with a Developer ID certificate, notarized by Apple, stapled, and shipped as a DMG. Gatekeeper accepts it without the right-click dance.</p>
+    </main>
+
+    <footer class="site">
+        Flexi Input · v1.1.4 · <a href="changelog.html">Changelog</a>
+    </footer>
+</body>
+</html>

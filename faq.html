@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FAQ — Flexi Input</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site">
+        <div class="inner">
+            <a class="brand" href="./">Flexi Input</a>
+            <nav>
+                <a href="./">Home</a>
+                <a href="features.html">Features</a>
+                <a href="download.html">Download</a>
+                <a href="changelog.html">Changelog</a>
+                <a href="faq.html" class="active">FAQ</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>FAQ</h1>
+
+        <details open>
+            <summary>The menu bar icon doesn't appear after launch.</summary>
+            <p>If your menu bar is full, macOS may have hidden the icon behind the camera notch on MacBook Pro. Cmd-drag other icons to make room. If that doesn't help, quit any prior copy of Flexi Input first — running two instances at once leaves the second one without a status item.</p>
+        </details>
+
+        <details>
+            <summary>I press a side-button but nothing happens — and the detection area stays empty.</summary>
+            <p>Flexi Input needs <strong>Input Monitoring</strong> permission for macOS to deliver HID events. Open <em>System Settings → Privacy &amp; Security → Input Monitoring</em>, enable Flexi Input, then quit and relaunch the app. The detection area will start filling in as soon as macOS routes events again.</p>
+        </details>
+
+        <details>
+            <summary>The button is detected, but the bound hotkey doesn't fire.</summary>
+            <p>That's the <strong>Accessibility</strong> permission. Without it the app can't install the event tap that swallows the original click and posts the hotkey. Toggle Flexi Input on under <em>System Settings → Privacy &amp; Security → Accessibility</em> and relaunch.</p>
+        </details>
+
+        <details>
+            <summary>Why does it need Accessibility access? That sounds invasive.</summary>
+            <p>The only thing Flexi Input does with the Accessibility entitlement is install a <code>CGEventTap</code> on mouse-button events. macOS doesn't expose a more granular permission for that; any app that synthesizes a keyboard shortcut needs the same access. The source code is auditable — Flexi Input does not log keystrokes, take screenshots, or connect to the network.</p>
+        </details>
+
+        <details>
+            <summary>Can I bind a side-button to a non-keyboard action — like opening an app?</summary>
+            <p>Not directly. Flexi Input only posts <em>keyboard shortcuts</em>. Combine it with a system-wide hotkey from another app (Raycast, Alfred, macOS Shortcuts) to chain to anything you want.</p>
+        </details>
+
+        <details>
+            <summary>Does it work with Logitech / Razer / wireless mice?</summary>
+            <p>Yes — anything macOS recognizes as a HID mouse appears in the device list. Vendor drivers (Logi Options+, Razer Synapse) sometimes intercept side-buttons before macOS sees them; if your mouse has a vendor driver, configure those buttons to send a generic "Button 4 / 5 / etc." event so Flexi Input can pick them up.</p>
+        </details>
+
+        <details>
+            <summary>Will my bindings sync across Macs?</summary>
+            <p>Not in this version. Bindings are stored in <code>~/Library/Preferences/com.cafesg.FlexiInput.plist</code>. You can copy that file across machines, or wait for cloud sync to be added.</p>
+        </details>
+
+        <details>
+            <summary>Is there auto-update?</summary>
+            <p>The release infrastructure publishes a signed Sparkle appcast at <code>appcast.xml</code>, so once the in-app updater ships, Flexi Input will check for new versions automatically. Until then, watch this site or the changelog page.</p>
+        </details>
+
+        <details>
+            <summary>How do I uninstall it?</summary>
+            <p>Quit the app from its menu bar icon, drag <strong>Flexi Input.app</strong> from <em>Applications</em> to the Trash, and remove <code>~/Library/Preferences/com.cafesg.FlexiInput.plist</code> if you want to wipe stored bindings.</p>
+        </details>
+    </main>
+
+    <footer class="site">
+        Flexi Input · v1.1.4 · <a href="changelog.html">Changelog</a>
+    </footer>
+</body>
+</html>

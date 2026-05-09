@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Download — Flexi Input</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site">
+        <div class="inner">
+            <a class="brand" href="./">Flexi Input</a>
+            <nav>
+                <a href="./">Home</a>
+                <a href="features.html">Features</a>
+                <a href="download.html" class="active">Download</a>
+                <a href="changelog.html">Changelog</a>
+                <a href="faq.html">FAQ</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Download Flexi Input</h1>
+        <p class="lede">Latest stable release. Signed and notarized — Gatekeeper accepts it on first launch.</p>
+
+        <p>
+            <a class="cta" href="https://github.com/duypv/flexiinput/releases/download/v1.1.4/FlexiInput-1.1.4.dmg">Download FlexiInput-1.1.4.dmg</a>
+        </p>
+        <p class="meta">Version 1.1.4 · released 2026-05-09 · 1371570 bytes</p>
+
+        <h2>System requirements</h2>
+        <ul class="checks">
+            <li>macOS 14 Sonoma or later</li>
+            <li>Apple Silicon or Intel — universal binary</li>
+            <li>Input Monitoring permission (granted on first launch)</li>
+            <li>Accessibility permission (granted from System Settings)</li>
+        </ul>
+
+        <h2>Install</h2>
+        <ol>
+            <li>Download the DMG above.</li>
+            <li>Open the DMG and drag <strong>Flexi Input.app</strong> into <strong>Applications</strong>.</li>
+            <li>Launch the app from Applications. macOS will prompt for Input Monitoring — grant it.</li>
+            <li>Open <em>System Settings → Privacy &amp; Security → Accessibility</em> and enable Flexi Input.</li>
+            <li>Quit and reopen Flexi Input so macOS starts delivering events.</li>
+        </ol>
+
+        <h2>Verify the download</h2>
+        <p>The DMG is signed with a Developer ID certificate and notarized by Apple. To verify manually:</p>
+<pre><code>spctl --assess --type open --context context:primary-signature -vv FlexiInput-1.1.4.dmg
+codesign -dv --verbose=4 /Volumes/FlexiInput/Flexi\ Input.app</code></pre>
+
+        <h2>Older versions</h2>
+        <p>See the <a href="changelog.html">changelog</a> for a list of all releases.</p>
+    </main>
+
+    <footer class="site">
+        Flexi Input · v1.1.4 · <a href="changelog.html">Changelog</a>
+    </footer>
+</body>
+</html>
