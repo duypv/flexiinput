@@ -6,16 +6,16 @@
         <description>Updates for Flexi Input.</description>
         <language>en</language>
         <item>
-            <title>Version 1.1.6</title>
+            <title>Version 1.1.7</title>
             <link>https://duypv.github.io/flexiinput/changelog.html</link>
-            <sparkle:version>1.1.6</sparkle:version>
-            <sparkle:shortVersionString>1.1.6</sparkle:shortVersionString>
+            <sparkle:version>1.1.7</sparkle:version>
+            <sparkle:shortVersionString>1.1.7</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <pubDate>Sat, 09 May 2026 06:53:44 +0000</pubDate>
+            <pubDate>Sat, 09 May 2026 07:24:27 +0000</pubDate>
             <enclosure
-                url="https://github.com/duypv/flexiinput/releases/download/v1.1.6/FlexiInput-1.1.6.dmg"
+                url="https://github.com/duypv/flexiinput/releases/download/v1.1.7/FlexiInput-1.1.7.dmg"
                 type="application/x-apple-diskimage"
-                sparkle:edSignature="r8gCObBPzELEYLOSAN5OHiUCpoep0zY0vhVAswmnCQpaGVJDfV4DQcJenOjOvA56qFrdeke3N0aUjmAFZ+ZMAg==" length="2565162" />
+                sparkle:edSignature="+jRwGvhG1IoWla9zHBpoHxoJZWPl5mFZFVmqmBPXxcd04d+DjblNMRH0n+jD/m+loSMB9hMSublNHtTgV2pCDA==" length="2625274" />
         </item>
     </channel>
 </rss>
